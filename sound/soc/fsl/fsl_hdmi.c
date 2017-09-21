@@ -271,7 +271,7 @@ static void hdmi_set_audio_infoframe(unsigned int channels)
 }
 
 static int cea_audio_rates[HDMI_MAX_RATES] = {
-	32000, 44100, 48000, 88200, 96000, 176400, 192000,
+	44100, 48000,
 };
 
 static void fsl_hdmi_get_playback_rates(void)
@@ -321,12 +321,14 @@ static void fsl_hdmi_get_playback_channels(void)
 	playback_channels[i++] = channels;
 	channels += 2;
 
+/*
 	while (i < HDMI_MAX_CHANNEL_CONSTRAINTS &&
 	       i < ARRAY_SIZE(edid_cfg.sample_rates) &&
 	       edid_cfg.sample_rates[i] && edid_cfg.sample_sizes[i]) {
 		playback_channels[i++] = channels;
 		channels += 2;
 	}
+*/
 
 	playback_constraint_channels.list = playback_channels;
 	playback_constraint_channels.count = i;

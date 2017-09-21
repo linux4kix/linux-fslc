@@ -174,7 +174,7 @@
 &hdmi_cec {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_cubox_i_hdmi>;
-	status = "okay";
+	status = "disabled";
 };
 
 &i2c2 {
@@ -294,7 +294,7 @@
 &spdif {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_cubox_i_spdif>;
-	status = "okay";
+	status = "disabled";
 };
 
 &usbh1 {
